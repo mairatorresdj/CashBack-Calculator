@@ -1,4 +1,4 @@
-const API_URL = ""; // depois troca no deploy
+const API_URL = "https://cashback-calculator-production.up.railway.app"; // depois troca no deploy
 
 const form = document.getElementById("formulario_cashback"); 
 const resultado = document.getElementById("resultado"); 
