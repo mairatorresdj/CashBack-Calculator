@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000"; // depois troca no deploy
+const API_URL = ""; // depois troca no deploy
 
 const form = document.getElementById("formulario_cashback"); 
 const resultado = document.getElementById("resultado"); 
