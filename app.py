@@ -10,7 +10,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:URzRovfysRZHYEoCTc
 app.secret_key = 'CashbackCalculatorSecretKey' # chave secreta para a sessão, ou da erro de runtime
 
 db = SQLAlchemy(app) #Inicia o FlaskAlchemy com Flask
-CORS(app) # Habilita o CORS para permitir requisições do frontend
+
+
+with app.app_context():
+    db.create_all()
+    
+CORS(app, resources={r"/*": {"origins": "*"}}) # Habilita o CORS para permitir requisições do frontend
 
 
 class Consulta(db.Model): #criei direto daqui com sqlalchemy
@@ -98,11 +103,6 @@ def CashbackCalculator():
 
 
 
-# inicia o servidor Flask
 if __name__ == '__main__':
-    @app.before_request
-    def init_db():
-        db.create_all()
-
-        port = int(os.environ.get("PORT", 5000))
-        app.run(host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
