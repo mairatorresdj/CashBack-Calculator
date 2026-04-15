@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-image: url("./FundoSite.webp");
+    background-size: cover;
+    background-position: center;
+    outline: none;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+    flex: 1;
+    
+}
+
+.vip {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 10px; 
+}
+
+.botoes {
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 10px;
+}
+
+.cuponzinho {
+  display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.teste {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+input {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+
+.layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.historico_layout {
+    flex: 1;
+    max-height: 800px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 384px;
+    min-width: 300px;
+}
+
+#historico li {
+    list-style: none;
+    background: white;
+    padding: 6px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+#resultado {
+    color: green;
+}
+
+h3 {
+    text-align: center;
+}
+

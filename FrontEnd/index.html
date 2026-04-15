@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Cashback Calculator</title>
+     
+</head>
+<body>
+
+    <main>
+        
+
+        <div class="layout">       
+
+
+        <div class="container">
+            <div class="subtitulo">
+            <h2 id="subtitulo">Calcule seu Cashback</h2>
+            </div>
+                 
+                
+                <form id="formulario_cashback" class="formulario">  
+                    
+                    <div class="perguntas">
+                        <label>Valor da Compra</label>
+                        <input type="number" name="valor" id="valor" placeholder="R$0,00" step="0.01" min="0" required>
+                    </div>
+                    <div class="">
+                        <label>Cupom (Opcional)</label>
+                        <div class="cuponzinho">
+                            <input type="number" name="cupom" id="cupom" placeholder="Ex: 10" min="0" max="100"><span>%</span>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <label>Cliente VIP?</label>   
+                    </div>
+                   <div class="vip">
+                    <div><label><input type="radio" name="vip" value="sim" required>Sim<label></div>
+                        <div><label><input type="radio"  name="vip" value="nao">Não</label></div>
+                    </div>
+
+                    <div class="botoes">
+                    <div><button id="botao_enviar" type="submit" value="enviar">Enviar</button></div>
+
+                   <div><button onclick="location.reload()">Recomeçar</button></div>
+                    </div> <br>
+                        
+                         <p id="resultado"></p>
+ 
+                     
+                </form>
+                
+                </div>
+
+
+                <div class="historico_layout">
+                        <h3>Histórico</h3> <br>
+
+                        <ul id="historico"></ul>
+                </div>
+
+
+        </div>
+         
+                
+
+            
+                    <script src="script.js"></script>
+    </main>
+    
+</body>
+</html>
