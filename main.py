@@ -10,11 +10,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:URzRovfysRZHYEoCTc
 app.secret_key = 'CashbackCalculatorSecretKey' # chave secreta para a sessão, ou da erro de runtime
 
 db = SQLAlchemy(app) #Inicia o FlaskAlchemy com Flask
-CORS(app, resources={
-    r"/*": {
-        "origins": "https://cash-back-calculator.vercel.app"
-    }
-}) # Habilita o CORS para permitir requisições de outros domínios
+CORS(app) # Habilita o CORS para permitir requisições do frontend
+
 
 class Consulta(db.Model): #criei direto daqui com sqlalchemy
     id = db.Column(db.Integer, primary_key=True)
