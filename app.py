@@ -49,6 +49,9 @@ def CashbackCalculator():
         if cupom:
 
             desconto_percentual = float(cupom) / 100 # transformou o valor do cupom para porcentagem
+            if cupom > 100:
+                return jsonify({"erro": "Cupom não pode ser maior que 100%"}), 400
+            
             desconto = valor * desconto_percentual # aqui ele calculou o valor do desconto
             
         else:
