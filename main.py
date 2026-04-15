@@ -100,8 +100,9 @@ def CashbackCalculator():
 
 # inicia o servidor Flask
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all() # auto run, cria as tabelas do banco de dados
+    @app.before_request
+    def init_db():
+        db.create_all()
 
         port = int(os.environ.get("PORT", 5000))
         app.run(host="0.0.0.0", port=port)
