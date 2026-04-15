@@ -14,8 +14,16 @@ db = SQLAlchemy(app) #Inicia o FlaskAlchemy com Flask
 
 with app.app_context():
     db.create_all()
-    
+
 CORS(app, resources={r"/*": {"origins": "*"}}) # Habilita o CORS para permitir requisições do frontend
+
+
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Allow-Methods"] = "GET,POST,OPTIONS"
+    return response
 
 
 class Consulta(db.Model): #criei direto daqui com sqlalchemy
