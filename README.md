@@ -1,4 +1,4 @@
-📊 <b>Sistema de Cálculo de Cashback<\b>
+📊 <b>Sistema de Cálculo de Cashback<b>
 
 Aplicação web full stack desenvolvida para calcular cashback de compras, considerando regras de desconto, tipo de cliente (VIP ou comum) e histórico de consultas.
 
@@ -8,7 +8,7 @@ O projeto é dividido em:
 🖥️ Front-end: Interface em HTML, CSS e JavaScript
 
 
-🚀 <b>Funcionalidades<\b>
+🚀 <b>Funcionalidades<b>
 
 Cálculo automático de cashback
 Aplicação de cupom de desconto
@@ -18,13 +18,13 @@ Registro de histórico por IP (últimas 4 consultas)
 
 🛠️ Tecnologias que utilizei
 
-<b>Back-end<\b>:
+<b>Back-end<b>:
 Python
 Flask
 Flask-SQLAlchemy
 Flask-CORS
 
-<b>Front-end<\b>:
+<b>Front-end<b>:
 HTML5
 CSS3
 JavaScript
